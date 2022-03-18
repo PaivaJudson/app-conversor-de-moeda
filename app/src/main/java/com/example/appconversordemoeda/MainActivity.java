@@ -19,28 +19,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txt_resultado = findViewById(R.id.txt_resultado);
+        txt_resultado = findViewById(R.id.txt_result);
         edt_valor = findViewById(R.id.edt_valor);
         btn_converter = findViewById(R.id.btn_converter);
 
-         /*
         btn_converter.setOnClickListener(view -> {
-            txt_resultado.setText("Oi");
-
             double valorEuros = Double.parseDouble(edt_valor.getText().toString());
             double valorDolares = valorEuros * 0.80;
             txt_resultado.setText(String.valueOf(valorDolares));
-
-
-        });   */
+        });
     }
 
+    /*
     public void calcular(View view){
         double valorEuros = Double.parseDouble(edt_valor.getText().toString());
         double valorDolares = valorEuros * 0.80;
         txt_resultado.setText(String.valueOf(valorDolares));
     }
-
+    */
 
 
 }
