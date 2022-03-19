@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView txt_resultado;
@@ -25,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
         btn_converter.setOnClickListener(view -> {
             double valorEuros = Double.parseDouble(edt_valor.getText().toString());
-            double valorDolares = valorEuros * 0.80;
-            txt_resultado.setText(String.valueOf(valorDolares));
+
+            DecimalFormat arredondar = new DecimalFormat("#.##");
+            double valorDolares = Double.parseDouble(arredondar.format(valorEuros * 0.80));
+            txt_resultado.setText(String.valueOf(valorDolares)+" $");
         });
     }
 
