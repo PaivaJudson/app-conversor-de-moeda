@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             DecimalFormat arredondar = new DecimalFormat("#.##");
             double valorDolares = Double.parseDouble(arredondar.format(valorEuros * 0.80));
             txt_resultado.setText(String.valueOf(valorDolares)+" $");
+            Toast.makeText(this, "Valor = "+valorDolares, Toast.LENGTH_LONG).show();
         });
     }
 
